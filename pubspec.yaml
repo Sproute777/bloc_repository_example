@@ -1,0 +1,68 @@
+name: bloc_repository_example
+description: A new Flutter project.
+
+# The following line prevents the package from being accidentally published to
+# pub.dev using `flutter pub publish`. This is preferred for private packages.
+publish_to: 'none' # Remove this line if you wish to publish to pub.dev
+
+# The following defines the version and build number for your application.
+# A version number is three numbers separated by dots, like 1.2.43
+# followed by an optional build number separated by a +.
+# Both the version and the builder number may be overridden in flutter
+# build by specifying --build-name and --build-number, respectively.
+# In Android, build-name is used as versionName while build-number used as versionCode.
+# Read more about Android versioning at https://developer.android.com/studio/publish/versioning
+# In iOS, build-name is used as CFBundleShortVersionString while build-number used as CFBundleVersion.
+# Read more about iOS versioning at
+# https://developer.apple.com/library/archive/documentation/General/Reference/InfoPlistKeyReference/Articles/CoreFoundationKeys.html
+version: 1.0.0+1
+
+environment:
+  sdk: ">=2.17.0 <3.0.0"
+
+dependencies:
+#    # локализация и языки
+  flutter_localizations:
+    sdk: flutter 
+  intl: ^0.17.0
+
+  cupertino_icons: ^1.0.2
+  flutter_bloc: ^8.0.1
+  bloc: ^8.0.3
+  http: ^0.13.4
+  # shared_preferences: ^2.0.15
+  rxdart: ^0.27.3
+  uuid: ^3.0.6
+  equatable: ^2.0.3
+  
+  hive: ^2.1.0
+  hive_flutter: ^1.1.0
+
+
+
+  google_fonts: ^2.3.2
+  formz: ^0.4.1
+  flow_builder: ^0.0.7
+  shared_preferences: ^2.0.15
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^1.0.0
+
+#  настройки для l10n генерации кода  ,
+#  что-бы работало установить Flutter Intl расшинеине  VSCode 
+flutter_intl:
+  enabled: true # Required. Must be set to true to activate the plugin. Default: false
+  class_name: Lang # Optional. Sets the name for the generated localization class. Default: S
+  output_dir: lib/src/common/l10n/generated
+  arb_dir: lib/src/common/l10n/arb
+  use_deferred_loading: true
+  # main_locale: en # Optional. Sets the main locale used for generating localization files. Provided value should comply with ISO-639-1 and ISO-3166-1 (e.g. "en", "en_GB"). Default: en
+
+
+flutter:
+  uses-material-design: true
+  generate: true
+  assets:
+    - assets/
